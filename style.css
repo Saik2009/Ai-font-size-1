@@ -1,16 +1,23 @@
-body{
-     background-image: url("https://i.scdn.co/image/ab67616d0000b2739f8a967f3887fad65477605f");
-    background-repeat:no-repeat;
-    background-size: cover;
+canvas{
+    border-width: 5px;
+    border-color: black;
+    border-style:double;
+    border-radius: 15px;
 }
-.copyright_footer{
+h3{
+    font-family: 'Anek Telugu', sans-serif;
+}
+#footer{
     position:fixed;
-    color:white;
-    bottom:0;
-    width:100%;
-    font-size: 10px;
-    background-color:grey;
-    line-height:3;
-    text-align:center;
-    text-shadow: 3px 3px 3px rgb(250, 254, 255);
+   background-color:silver;
+   color:white;
+   font-size: 10px;
+   bottom:0;
+   width:100%;
+   line-height:3;
+   text-align:center;
+
+}
+.btn-info{
+    font-size: 15px;
 }
