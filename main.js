@@ -1,34 +1,21 @@
-function preload(){
-
-}
-function setup(){
-    canvas=createCanvas(650,550);
-    canvas.position(0,50);
-    video = createCapture(VIDEO);
-  video.hide();
-  classifier=ml5.imageClassifier('MobileNet',ModelLoaded)
-
-function ModelLoaded()
+function setup()
 {
-  console.log("Model Loaded");
-
-}
+    video= createCapture(VIDEO);
+    video.size(550,500);
+    canvas=createCanvas(550,500);
+    canvas.position(560,150);
+    posenet=ml5.poseNet(video,modelLoaded);
+    posenet.on('pose',gotPoses);
 }
 function draw(){
-    image(video,0,0,660,550);
-    classifier.classify(video,gotResult);
-
+    background('whitesmoke');
 }
-function gotResult(error,results)
-{
-  if(error)
-  {
-    console.error(error);
-  }
-  else{
-    console.log(results);
-    document.getElementById("result").innerHTML=results[0].label;
-    document.getElementById("result1").innerHTML=results[0].label;
-    document.getElementById("result2").innerHTML=results[0].label;
-  }
+function modelLoaded(){
+    console.log("Model is loaded!");
+}
+
+function gotPoses(results){
+    if(results.length>0){
+        console.log(results);
+    }
 }

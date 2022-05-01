@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Google Lens Vs. Mobile net</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<head>
+    <title>Font-Size-AI-Manipulator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="main.js"></script>
-    </head>
-    <body style="background-color: rgb(252, 252, 246);">
-        <div style="float:right"class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-        <h1 class="" style="font-family: 'Anek Telugu', sans-serif;">        Google lens<sup><img height="50" src="https://play-lh.googleusercontent.com/G5oF0mhpOcQzFTrU6TDUL0JoAjzRt38weiZKua7L61WVT1z3dPcE9gUu-W2EwtM9cZU"></sup> VS. Mobile Net<sup><img height="50px" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEg4WEBUXGBYVERITEhUVEBUVFREWFxURFhUYHCggGRolGxUVITEhMSkrLi4uGCAzODMsNygtLisBCgoKDg0OGxAQGzMkICUuLTc3MDA2LTUvLy03LS01LS0tNzc1NS4zNS0vNjEtLjcxNS03NS01LS0rLy0tLS0tK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBBAcDAgj/xABEEAABAwIEAwUFBAgCCwEAAAABAAIDBBEFEiExBhNBByJRYXEUI4GRoTJSsdE1NkJic7PB8ILhFyQlM1NjdHWyw/EV/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAQFAwIGAf/EADARAQABAwIDBQYHAQAAAAAAAAABAgMEESEFElETIjEyoUFxgZGx4QYjJFJhwfAV/9oADAMBAAIRAxEAPwDuKIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIsIMrBXjVVTI25nvDB4uNh/mqrinGe7YGX/AH3iw9Q38/ku1rHuXZ7kOF7It2o78rbJKGi7nBo8SQB818w1TH/Yka/xyuB/BcpraySV2aR5eel9h6DYLyjeWkOaS0jYg2I+IWjHCZ5d6t2bPFo5tqdnYAsqhYVxhIyzZhzW/eGkg/o7+9VbsOxaGYe7kBPVp0ePVu6gvYty15o26tCzl2rvlnfo30WLrKnUiIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICxdedTM1jS9zg1rQS4nYAdVTMV47F8tOy/8AzHjT4M3+J+S7Wce5enSiNXC9kW7Ma1yuNTVsjbmkeGN8XGw9PVVTFeMh9mnZf9940+Dd/n8lU6mtfKcz5C8+Z28rdF5LXscMop3ubz6Me/xOuvajaPV71dXJK7NJIXnzO3oNgvBFG1+NRR6Xzu+63+p2C1bduZ7tEIKaa7tW28pJFTa3HJX7O5bfBuh+Lt14U+KTMNxK4+TiXD6qyMG5prqtjhtzTWZjVeVljiDcEgjYgkEehCg6DiJjtJByz47s/wAlNNcCLg3HQjZS3LVVG1UI7lqu1PejRZcL4ulZ3ZRzm+O0nz2P96q4YdjEM493ICerTo8erT+K5WsteW6glpGxBsR8VmX+HW7m9O0+iuxxG5b2q3h2G6yudYbxvJHZsree3xGkg+Ozv71V2wjFYqhueJ+YDRwIs5p8CFj38S7Z3qjbq2LGXaveWd+jfREUyoREQEREBERAREQEREBERAREQEREBERAREQRHFdA+emfHH9o2IF7XyuBy387Lk08DmOLXsLHDQtcLELt5Vb41rKaKIe0Q84uJEbRbODa5cHbtHn5rSwc6bHdmNYn5osnhtWZXEW/N06uYgkbLTrOJIotCeY7wZ09TsFHY8yaS5idlZr7oHW3hn/a+iqskZabOaWnwIstuMqi55XGvgF/Gn9TGnu8PmsNZjck37WVv3W/1O5WgosEjY2WzHVeI+IWpjZtuI5ZjlVUUU0RpTGjbRfLHg7G6yStKKomNYl7ZWxSV0kRux+XxG7T6gqOkqgNtfwWs+Qnc/kocjNtRHLHe+jzVEVRpO650nFkZ7rxkP3tTH+Y/DzUpzs2t7jpY6fRc2U1g1JUNOZrjE3qHa3/AMH/AMWRORTROtWyP/i15NWmPG/T2fZbl0Hs8wqWPmSyNMYeGhrXaONiTmI6b2+ajOz+vpS8RGDLOR3ZHHMHZQSQ2/2DYE28t9F0ULJzuI9pTNumNusutvg13Du/n7VR7GURFjrxERAREQEREBERAREQEREBERAREQEREBERBgqucZcOmrY3I8NewnLm+w4HdptqNhqrIsWX7E6Tq6Wb1dmuLlE6TDheJ4VNTuyzRFng7dh9HDQqNqKZjxZ7Q7wvuPQ7hfoGop2vaWvYHtO7XAEH4FUzG+z6N13UzuU7flu1jPkDu36rvRefUY3HbN6OTJp09YcVrcBI1jdmH3Xfa+B2KiJIy02cC0+BFiui4phU1O7LNEWeB3YfRw0UbUUzHiz2h34j0PRaFrMmPNu/MngNi/HaY1WmvxhSgUJ81N1XD53jfp912/zC84cAkJ7zmtHlqVZGTRp5nz9XB8yK+Tkn+kQpGiwaR+rvdt8/tfBv5qeo8Njj2bc/eOp+Hgt+ngc9wYxhe47NaCXfIKW5mftbeJ+HaaY58mr4R4fGUfR4bHHs27vvHV3w8PgpCnp3vcGMYXuOzWtJd8grngnZ/I6zql/LG/LaQZPRzth8Lq+YXhMNO3LDEGDqd3HzLjqVn13tZ3nVTe4vi4lPZ49Ovu8Pv/t1P4M4OlilZUTkMLb5Iwbuu5hbd522cdFfgsWWVPVVMzu+Zysu5k3O0ueLKIi8phERAREQEREBERAREQEREBERAREQEREBERAREQFhZRB4z07XtLXtD2ndrgCCqXjnZ/G67qZ/Kdvy3XdGfQ7t+oV6ReoqmPBRj5d7HnW3Vp9HCsUwmandlmiLPB27D6OGi1qaB0jgyNhkcdmtFz9F3x7ARYgEeBFx8l8xU7G/ZY1vjlaB+C6dr/Dep/ElfJpVRv79nOME7PpHWdUv5Q/4bLGQ+rth9VfMMwmGnbkhiDB1O7j5lx1K30XOa5ljZXEL+TP5lW3T2MWWUReUQiIgIiICIiAiIgIiICIiAiIgIiICIqpj3HdPSVkVFLFMXSCN3Na1pgYJZXRMzkuuO83wO4QWtFW+NuMafDYmSTse/O8sayIML9GlxdZzmjKAPqFNYZWtmhjmaCGyMa9odbMA5oIBsSL6+KDaRYusoCKA4a4qhrJKqOJkjTTSmGQyBoDnNc4Ess46d072U9dBlFgqocKY/iE9ZUw1WGGlgjLuRNc96zw0N10fmF3ZhoLeYKC4IoPiriIUTGPNJUVWd2XLSxCR7e6TmcCRYabqJ4Z7QYayqNGKOqppRGZSKmNkfdBA2Dydcw6ILkiLF0GURVPjvjunwvlGoilk5ufLyQw25eW+bM9v3x47FBbEUXjGNR09K+sdeSNjOb7uxc5tgbtuQNj4r3wXEW1EEVQwFrZY2SMDrZw17Q4B1iRex8UG6ixdLoMoojifiKChgNRUFwjDmtJa3Mbu20ClroMoiICLF1lARYuqnxTx7BSTNpWwy1lS4XFPTMzPAOxedmj5nrayC2oqbw32gw1NR7HNTTUNVlzNgqG2zgAk5HftaAnYbHwVyQEREBERAREQFx7tFwo1eLzUzftPwsuj/ixVT3xn5i3xK7Cuc1n60w/9vP8APlQUzHscbicMtW6zhR4bZ1jo2srm8tw6C4a09CL+BAXS2Y6yiwaOqeMwjpoiG3tmcY2tYy/S7iBfzUT2q4TBTYJWinp46cO5LniJjWBxNTECSANTbRafHrC7hiwBJ5FITYX0bJCSfQAEoPjDoeJKqBtY3EYKbmNEsVH7PG5uUjMxjpC0uGYW63GborR2ccVuxClMkkYimikdBUMabt5jACXN8jfbobi53UrwrO11FSva67TBCQeluU3VUXsJF46941aa2TKehs0E/Rw+aCB4KFfJVYtBQSspnGtlfNVSsEmQc6QMjjjOjnO75JOgDfFwtZuGsfxGmxJuGYnIyq5zHSUtVGxsd8jXFzHNa0C1mu6aEDe+mt2Pzt9sxll+8Kx7iPIyzAH5gr14neDxLhjQ4EthnLmgi4BimsSOmxQWzjChxCVkYw+uZRuDiZHPibJmbbRoDmm2qrXZviuIOra+jrqwVRpuSGObFHG28gc5xGRoJ6b+C6KuccD/AKcxn1pf5ZQdHXNIP1qf/wBCP5jF0tc0h/Wp/nQi3n7xv5FB0tc3r8cxKvrailw2eOiipXBk9TJEJHvlNwY2McCLCx+W+q6Pdce4QwQ1GI4u1uJVNG5tU4mOnkYzM1zn2e4OYSfI+aCdwLHsRpMQiw7EpI6oVDXvpauNgjcXMBLo3saANh4dRqb6afa9QtnrcJgf9mWSoid6SRxtJ+qko+EaaKvpZKjGKioqWZ3UsNRNCS4FhD8rQwOItrp4LX7Sf0pgn8eX/wBSCHoMRkfw3WU8x9/SMmpZgd/du7nTXuFov1tdXLhnEmU2CU1RJfJFRRSOA3IbA02HmdlQ+0ZgoquvBOWLEqN7mkkBvtNKz7I23afM5pPMKx1bSeFwAL/7PjOngIGk/QFBo4O/iHEIhWR18GHxyXdT03IZL7u/cc97mk3I/obC6sXZzxVLWxzx1MbY6mlldBUCN12OLSRnA6atcLaju3vrYQXA3Cr5sPpZWY3XRh0LPdxyxiNhDQDG0GMkAEEfBTvAXD1JTS1b6evfWyyPaKsySRvcyVhfcOyNFnXc64Pgg552uYVi8dFI+rxSOop+ay0DaeNjhdxyd8MB09Vd8LwPH2zRunxuKaIOBljFLE0vYD3mhwjBBI63Wt2+/ol/8WL/AMiujXQZCIiCH4t9o9jqDSScudsbnQuDWO7ze9lyvBb3rFuvitHs54gNdh8FS43kILZtAPeMcWuNhoL2DreDgrMuNcP4uMHlxmkccrIR7XRtOgtIAAxtzqMz4WgeIPVBbOEMeqazEsQ97/qdO5sEMYYyxlAHMfny5jYtdpe1nDRTODcKxU9VU1ge+SWpIzl+U5Gg6RssBZoGUf4QozsjwY02GQ5x7ya9RMTfMXS6jNfXMGZAb+C+u0DjA0gZT0sftFdP3aaBupF7jnvHRgsd97HYAkBA8fSNnxnCqaFuaeKQzzED/dwgg953S+R2np4i/Tgqh2f8G+wtfPUS+0Vs/eqpyb6nXlM/dB69fIAAXBAREQEREBERAUFLwzGcRbiPMfzGw+ziPu8stL3OzHS97uPVTqIIjizAWV1LJSSPdGyTJmcy2cZJGvFrgjdoC94MIiFK2keObEIhC4Pt32BmU5reIUgiDm3+iZrQYocXroKZxJNMybuAONy1p2t6g+d1eMAwWCjgZT08fLjZsNySd3OPUk9VIogoTuzCAOnliramCaaZ84nhkDJIzISXxjKBmjNxofujULd4Q4AhoZX1Lp5aypkFn1FQ7M+2mjfC9huTt0VwRBWOK+EjWvY8YjVUeRpblppeW11zfM4W1KrcPZGxj3yMxmvY+S3NkbMA9+XbO4Nu63mulogjOHcKNLA2A1EtTlzHmzuzzOzPLu87ra9h5AKH4u4Fp66SOd0ktNPECGVFM8Mlym/cJsbjU+B1PirWiCscKcJGie95xGqrM7Q3LUy52tsb5mjoVp8TdnsNTUe2Q1M9BU5cr5qZ+QyDQd8bk2AF7jYXvYWuaIKhwvwFDSTGqfUTVtSW5faKl+dzW9WsHQfPqpDH+GI6qopKl8j2OpHukja3LleXZbh1xf8AY6W3U+iCs8dcGQYnEyKdzo8j87Hx5c4u0gt7wOh0+QUthOFsgpoqUXkZHG2EZwCXNawN7wGmo3UgiDnT+ypjHOFJitbQwvJL6eGY8rXcM8B63Vr4U4Zp8Ph5FOwgE5pHvOaWR5ABe93U6eQ8gppEEXxJgUFbTvpqhpdG+17Gz2kG7XtPQg/lsq3gfZ57NNHK3F66VsZu2GWfNCQAQGubYXCvCIMBZREAqlca9nNPiMzZpZ5YXBgieIi0CRgkzhr7tN7OF/krqiD5YwAAAWAFgBoABsAFRMa7MY6iskrm4hVU0sgAPIe1lmhjW5Qct7d0HdX1EFBpezZzHsf/APuYi/K5rsjqi7HZXA5XC2oNrFX0LKICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIg//2Q=="></sup></h1>
-        <br><br>
-        <center><kbd style="font-size: 15px;">Item No 1: Water Bottle</kbd>
-        
-        <h3>Google Lens result: Water Bottle</h3>
-        <br>
-        <h3>Mobile Net result:<span class="btn btn-info" id="result"> Pending...</span></h3>
-        
-        <hr>
-        <kbd style="font-size: 15px;">Item No 2: Baseball </kbd>
-        
-        <h3>Google Lens result: Baseball</h3>
-       
-        <h3>Mobile Net result:<span class="btn btn-info" id="result1"> Pending...</span></h3>
-        <hr>
-        <kbd style="font-size: 15px;">Item No 3: Spoon </kbd>
-        
-        <h3>Google Lens result: Spoon</h3>
-       
-        <h3>Mobile Net result:<span class="btn btn-info" id="result2"> Pending...</span></h3>
-        
-    </center>
-    </div>
-    <div id="footer">By:Saikrish Kolli  |Fonts from: <a href="https://fonts.google.com/">Google fonts</a>|</div>
-    </body>
+</head>
+<body>
+    <center>
+        <div style="font-family: 'Cinzel', serif; background-color:rgb(255, 245, 245)" class="header">
+    <h1>
+        AI Font Size Manipulator
+    </h1>
+    <h3>Font-Size:<span id="font_size"></span></h3>
+    <br>
+   <p><strong style="color:red;">Note:</strong> Use your wrists to increase and decrease the font size (e.g moving them apart from each other increases the size of the font)</p>
+   
+</div>
+</center>
+<div class="copyright_footer">By:Saikrish Kolli</div>
+</body>
 </html>
