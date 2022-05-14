@@ -12,7 +12,8 @@ function setup()
 }
 function draw(){
     background('whitesmoke');
-    text('Saikrish',10,100,difference,difference);
+    text('Saikrish',10,100);
+    textSize(difference);
     
 }
 function modelLoaded(){
